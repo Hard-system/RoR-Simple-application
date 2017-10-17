@@ -1,0 +1,24 @@
+<h2 style="text-align: center; color: white;
+    text-shadow: 2px 2px 17px #000000; font-family: "Times New Roman", Times, serif;">Edit article</h2><br>
+<form action="/edit" method="post" id="edit">
+ <input type="hidden" name="_method" value="put">
+ <textarea rows="20" cols="90" name="message" style="background-color:#EEEEEE;height:445px;width:700px;float:left; border: 1px solid black; margin: 1px; padding: 12px;border-radius: 5px;overflow-x: hidden;overflow-y: scroll;margin-left: 25%; text-align: justify;opacity: 0.8;
+  filter: alpha(opacity=80);"><%= @info %></textarea>
+ <input type="submit" value="Update">
+ </form>
+
+ <form action="/edit/remove" method="post" id="edit">
+ <input type="hidden" name="_method" value="delete">
+ <input type="submit" value="Remove">
+ </form>
+
+
+ <form action="/edit/overwrite" method="post" id="edit">
+ <input type="hidden" name="_method" value="put">
+ <input type="submit" value="Overwrite">
+ </form>
+
+ <form action="/edit/retrieve" method="post" id="edit">
+ <input type="hidden" name="_method" value="put">
+ <input type="submit" value="Retrieve">
+ </form>

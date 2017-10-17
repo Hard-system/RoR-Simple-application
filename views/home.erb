@@ -1,0 +1,29 @@
+
+<div style=" text-align: center; color: white;
+    text-shadow: 4px 4px 20px #000000; font-family: 'Times New Roman', Times, serif; font-size: 22px;">
+<p>Welcome to WAD wiki. A free online encyclopaedia of knowledge that can be viewed by
+anyone!</p>
+<p>Feel free to search for anything you desire! And if it does not exist then create it!</p>
+<p>Use the menu to the left to navigate the site!</p>
+</div>
+
+
+<iframe scrolling="no" frameborder="no" clocktype=\"html5\" style="overflow:hidden;border:0;margin:0;padding:0;width:400px;height:350px;  float: right;" src="http://www.clocklink.com/clocks/HTML5/html5-random.html?480&5000"></iframe>
+
+<div id="content" style="background-color:#EEEEEE;height:400px;width:200px;float:left; border: 1px solid black;  margin: 1px; padding: 25px; border-radius: 5px;opacity: 0.8; float: left;
+  filter: alpha(opacity=80); >
+	<p></p>
+</blockquote>">
+Number of letters: <%= @letters %> <br>
+Number of characters: <%= @characters %>
+Number of words: <%= @words %> <br>
+Number of lines: <%= @line_count %> <br>
+Number of sentences: <%= @sentences %> <br>
+Number of paragraphs: <%= @paragraph_count %>
+</div>
+
+
+<div id="content" style="background-color:#EEEEEE;height:425px;width:700px;float:left; border: 1px solid black; margin: 1px; padding: 12px;border-radius: 5px;overflow-x: hidden;overflow-y: scroll; text-align: justify; opacity: 0.8; position: inline;
+  filter: alpha(opacity=80);">
+<%= @info %>
+</div>

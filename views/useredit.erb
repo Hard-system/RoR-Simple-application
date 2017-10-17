@@ -1,0 +1,6 @@
+<h2>Edit user:<%= @user.username %></h2>
+<form action="/user/update/<%= @user.username %>" method="post" id="edit">
+  <input type="hidden" name="_method" value="put">
+  <label>New username <input type="text" name="new_username"></label> 
+  <input type="submit">
+ </form>

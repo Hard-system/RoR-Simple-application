@@ -1,0 +1,68 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+
+			<meta charset="UTF-8">
+			
+			<meta name="viewport" content="width=device-width">
+			<meta name="description" content="This is my new Wiki Application"/>
+			<meta name="keywords" content="wiki, test app, blog"/>
+			<link rel="stylesheet" href="/style.css" type="text/css" />
+			
+  
+ 
+
+		<title>My Page</title>		
+	</head>
+
+	<body>
+
+	
+	
+	<header>
+	    
+	    <ul class="topnav" id="myTopnav">
+	      	<li class="active"><a href="/">Home</a></li>
+			<li class="active"><a href="/video">Video</a></li>
+			<li class="active"><a href="/about">About</a></li>
+			<li class="active"><a href="/edit">Edit</a><li>
+	      		<% if $credentials %>
+	      			<% if $credentials[0] != '' %>
+						<p style="color:white">Logged in as:</p><a href = "/user/<%= $credentials[0] %>"><b><%= $credentials[0] %></b></a>
+	      				<a href="/logout" >Logout</a>
+	      				<% if $credentials[0] == "Admin" %>
+	      				<a href="/admincontrols">Admin Controls</a>
+	      				<% end %>
+	      		<% else %>
+	      				<a href="/login" >Login</a>
+	      		<% end %>
+	      		<% else %>
+	      			<a href="/login" >Login</a>
+	      		<% end %>
+	      			
+	      			
+	      	
+	      
+	      	
+	     </ul>
+	</header>
+
+
+
+	<div class="view_content">
+		<%= yield %>
+	</div>
+
+	
+
+
+
+	<footer class="footer1" style="font-weight: bolder; margin-bottom: 1px; border: 1px solid #333; padding: 5px 5px; color:white; background-color: #333; text-align: center; position: fixed; bottom: -0; width: 100%; margin: auto;">Created by Miroslav Stoyanov copyright 2017</a>
+	</footer>
+	
+
+
+	
+	</body>
+	</html>
